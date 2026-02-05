@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro - ClubConnect</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <h1 class="logo">ClubConnect</h1>
+
+    <div class="links">
+      <a href="index.html">Inicio</a>
+      <a href="login.html">Iniciar sesión</a>
+    </div>
+  </nav>
+
+  <!-- FORMULARIO -->
+  <section class="hero">
+    <h2>Crear cuenta</h2>
+    <p>Registrate para acceder a la plataforma del club.</p>
+
+    <form class="form-box" action="../php/register.php" method="POST">
+
+  <input type="text" name="nombre" placeholder="Nombre completo" required>
+
+  <input type="email" name="email" placeholder="Correo electrónico" required>
+
+  <input type="password" name="password" placeholder="Contraseña" required>
+
+  <button type="submit" class="cta">
+    Registrarse
+  </button>
+
+</form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>ClubConnect - Proyecto académico UTU</p>
+  </footer>
+
+</body>
+</html>
