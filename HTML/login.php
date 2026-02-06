@@ -17,6 +17,15 @@
     </div>
   </nav>
 
+  <?php
+session_start();
+
+if (isset($_SESSION["id"])) {
+    header("Location: dashboard.php");
+    exit();
+}
+?>
+
   <!-- FORMULARIO LOGIN -->
   <section class="hero">
     <h2>Iniciar sesión</h2>
@@ -37,7 +46,7 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>ClubConnect - Proyecto académico UTU</p>
+    <p>Proyecto Personal Carlos - ClubConnect</p>
   </footer>
 
 </body>

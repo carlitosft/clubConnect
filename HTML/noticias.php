@@ -15,10 +15,11 @@ $resultado = $conn->query("SELECT * FROM noticias ORDER BY fecha DESC");
 
 <header class="navbar">
   <h1 class="logo">ClubConnect</h1>
-  <nav>
+  <nav class="links">
     <a href="index.html">Inicio</a>
-    <a href="noticias.php">Noticias</a>
-    <a href="login.html">Ingresar</a>
+    <a href="dashboard.php">panel</a>
+    <a href="entrenamientos.php">Entrenamientos</a>
+     <a href="jugadores.php">⚽ Ver jugadores registrados</a>
   </nav>
 </header>
 

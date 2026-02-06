@@ -2,6 +2,13 @@
 session_start();
 include("db.php");
 
+/* ✅ EXTRA: si ya está logueado, mandarlo al dashboard */
+if (isset($_SESSION["id"])) {
+    header("Location: ../html/dashboard.php");
+    exit();
+}
+
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $email = $_POST["email"];

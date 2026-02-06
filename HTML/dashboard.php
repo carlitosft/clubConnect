@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+
+
 /* 
    Si no existe la sesión, significa que el usuario NO inició sesión
 */
@@ -26,7 +28,7 @@ if (!isset($_SESSION["id"])) {
     <div class="links">
       <a href="dashboard.php">Panel</a>
       <a href="noticias.php">Noticias</a>
-
+      <a href="jugadores.php">⚽ Ver jugadores registrados</a>
       <a href="../HTML/logout.php" class="btn">Cerrar sesión</a>
     </div>
   </nav>
@@ -78,6 +80,31 @@ if (!isset($_SESSION["id"])) {
     </section>
 
   <?php } ?>
+
+  <!-- PUBLICAR ENTRENAMIENTO (SOLO ADMIN) -->
+
+  <?php if($_SESSION["rol"] == "admin") { ?>
+
+<section class="section">
+  <h3>📅 Publicar Entrenamiento</h3>
+
+  <form action="../php/publicar_entrenamiento.php" method="POST" class="form-box">
+
+    <input type="text" name="titulo" placeholder="Título del entrenamiento" required>
+
+    <textarea name="descripcion" placeholder="Descripción..." required></textarea>
+
+    <input type="date" name="fecha" required>
+
+    <input type="time" name="hora" required>
+
+    <button type="submit" class="cta">Publicar Entrenamiento</button>
+
+  </form>
+</section>
+
+<?php } ?>
+
 
 </body>
 </html>
